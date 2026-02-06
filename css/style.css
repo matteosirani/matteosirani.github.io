@@ -81,6 +81,15 @@ body.light-theme .research-interests li {
     background-color: #ecf0f1;
 }
 
+body.light-theme details summary {
+    color: #2980b9 !important;
+}
+
+body.light-theme details p {
+    color: #333 !important;
+    border-left-color: #3498db !important;
+}
+
 body.light-theme footer {
     background-color: #2c3e50;
     color: white;
