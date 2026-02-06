@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Projects - Matteo Sirani">
+    <title>Research - Matteo Sirani</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">
+                <img src="images/bgse-logo.png" alt="BGSE" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+                Matteo Sirani
+            </h1>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle">☀️ Light</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <h3>Research</h3>
+                
+                <h4 class="subsection-heading" style="margin-top: 2rem; margin-bottom: 1rem; color: #d0d0d0; font-size: 1.2rem;">Working Papers</h4>
+                
+                <div class="publication-item">
+                    <h4>Financial Frictions Across the Production Network and the Transmission of Monetary Policy</h4>
+                    <p class="authors">with 
+                        <a href="https://sites.google.com/view/stefan-gebauer/home" target="_blank" style="color: #5dade2;">Stefan Gebauer</a>, 
+                        <a href="https://sites.google.com/view/alessandrodesanctis/home" target="_blank" style="color: #5dade2;">Alessandro De Sanctis</a>, 
+                        <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/federic-holm-hadulla.en.html" target="_blank" style="color: #5dade2;">Federic Holm-Hadulla</a>
+                    </p>
+                    <details style="margin-top: 1rem;">
+                        <summary style="cursor: pointer; color: #5dade2; font-weight: 600;">Show Abstract</summary>
+                        <p style="margin-top: 1rem; padding-left: 1rem; border-left: 3px solid #5dade2; color: #e0e0e0; line-height: 1.7;">
+                            We examine how sector-specific financial frictions and production network linkages shape monetary 
+                            policy transmission. Using granular country-sector data for the euro area we construct novel measures 
+                            of upstream and downstream financial frictions. Panel local projections show that financial frictions 
+                            among upstream suppliers and downstream customers substantially amplify the effects of monetary policy 
+                            on prices and output. Importantly, this amplification is not driven solely by a sector's own financial 
+                            position: indirect financial frictions transmitted through production networks account for a significant 
+                            share of the response. We further document that downstream financial frictions reinforce the contractionary 
+                            effects of monetary policy through a demand channel, while upstream financial frictions generate a 
+                            countervailing cost channel by raising sectoral prices. A multi-sector model with heterogeneous financial 
+                            frictions rationalizes these findings and highlights the importance of network-based financial channels 
+                            for monetary policy transmission.
+                        </p>
+                    </details>
+                    <div class="links" style="margin-top: 1rem;">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279409" target="_blank">SSRN</a>
+                    </div>
+                </div>
+
+                <h4 class="subsection-heading" style="margin-top: 2rem; margin-bottom: 1rem; color: #d0d0d0; font-size: 1.2rem;">Work in Progress</h4>
+
+                <div class="publication-item">
+                    <h4>Price Updating in Production Networks</h4>
+                    <details style="margin-top: 1rem;">
+                        <summary style="cursor: pointer; color: #5dade2; font-weight: 600;">Show Abstract</summary>
+                        <p style="margin-top: 1rem; padding-left: 1rem; border-left: 3px solid #5dade2; color: #e0e0e0; line-height: 1.7;">
+                            This project develops a unified framework to study firm pricing behavior in production networks 
+                            under limited network awareness. Existing models assume firms are either fully myopic or fully 
+                            informed about network spillovers—yielding starkly different predictions for pass-through. 
+                            I introduce a tractable model where firms internalize a finite number of network steps, nesting 
+                            both extremes and allowing empirical estimation of firms' effective network depth using survey data.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Matteo Sirani. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Theme Toggle Functionality - Inline for reliability
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            
+            // Check for saved theme preference or default to dark
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            
+            // Apply saved theme
+            if (savedTheme === 'light') {
+                body.classList.add('light-theme');
+                if (themeToggle) themeToggle.textContent = '🌙 Dark';
+            } else {
+                if (themeToggle) themeToggle.textContent = '☀️ Light';
+            }
+            
+            // Toggle theme when button is clicked
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    body.classList.toggle('light-theme');
+                    
+                    if (body.classList.contains('light-theme')) {
+                        themeToggle.textContent = '🌙 Dark';
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        themeToggle.textContent = '☀️ Light';
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
