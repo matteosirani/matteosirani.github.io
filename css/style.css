@@ -68,6 +68,15 @@ body.light-theme .contact a {
     color: #3498db;
 }
 
+body.light-theme .social-links a {
+    background-color: #3498db;
+    color: white;
+}
+
+body.light-theme .social-links a:hover {
+    background-color: #2980b9;
+}
+
 body.light-theme .research-interests li {
     background-color: #ecf0f1;
 }
