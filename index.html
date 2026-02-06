@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matteo Sirani - PhD Student in Economics at Bonn Graduate School of Economics">
+    <title>Matteo Sirani - Academic Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">
+                <img src="images/bgse-logo.png" alt="BGSE" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+                Matteo Sirani
+            </h1>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle">☀️ Light</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="Matteo Sirani" class="profile-img">
+                    <div class="profile-info">
+                        <h2>Matteo Sirani</h2>
+                        <p class="position">PhD Student in Economics</p>
+                        <p class="affiliation">Bonn Graduate School of Economics</p>
+                        <p style="margin-top: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                            Prior to my doctoral studies, I worked as a trainee and consultant in the Monetary Policy 
+                            Strategy Division at the ECB. I hold an MPhil in Economics from the University of Oxford, 
+                            and a bachelor's degree in Finance from Bocconi University.
+                        </p>
+                        <p style="margin-top: 1rem; line-height: 1.6; font-size: 1.05rem;">
+                            My research focuses on macroeconomics, particularly models with heterogeneous firms. I am 
+                            interested in the intersection of empirical macroeconomics and structural modeling, using rich 
+                            micro-level data to study firm dynamics, financial frictions, and the transmission of macroeconomic 
+                            shocks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h3>Contact</h3>
+                <p><strong>Email:</strong> <a href="mailto:matteo.sirani@uni-bonn.de">matteo.sirani@uni-bonn.de</a></p>
+                <p><strong>Address:</strong> Adenauerallee 24-42, 53113 Bonn, Germany</p>
+                <p><strong>Phone:</strong> (+39) 3492539656</p>
+                <div class="social-links">
+                    <a href="https://de.linkedin.com/in/matteo-sirani-94b6a7193" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/viscontemezzo" target="_blank">GitHub</a>
+                    <a href="https://x.com/SiraniMatteo" target="_blank">Twitter/X</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Matteo Sirani. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Theme Toggle Functionality - Inline for reliability
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            
+            // Check for saved theme preference or default to dark
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            
+            // Apply saved theme
+            if (savedTheme === 'light') {
+                body.classList.add('light-theme');
+                if (themeToggle) themeToggle.textContent = '🌙 Dark';
+            } else {
+                if (themeToggle) themeToggle.textContent = '☀️ Light';
+            }
+            
+            // Toggle theme when button is clicked
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    body.classList.toggle('light-theme');
+                    
+                    if (body.classList.contains('light-theme')) {
+                        themeToggle.textContent = '🌙 Dark';
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        themeToggle.textContent = '☀️ Light';
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
