@@ -17,6 +17,17 @@ Desktop.ini
 *.bak
 *.log
 
+# LaTeX source files (local only)
+Matteo_Sirani_academic/
+
+# Source assets (local only)
+BGSE logos/
+08_Matteo Sirani/
+
+# Documentation (local only)
+*.md
+!README.md
+
 # Don't ignore these (keep them in git)
 !images/.gitkeep
 !files/.gitkeep
