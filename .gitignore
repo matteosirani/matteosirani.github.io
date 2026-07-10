@@ -1,0 +1,45 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+
+# Local source folders, not part of the public site
+Matteo_Sirani_academic/
+BGSE logos/
+08_Matteo Sirani/
+
+# Local documentation drafts
+*.md
+!README.md
+
+# Keep deployable asset directories trackable if placeholders are added later
+!images/.gitkeep
+!files/.gitkeep

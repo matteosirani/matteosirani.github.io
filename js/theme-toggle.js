@@ -1,30 +1,40 @@
-// Theme Toggle Functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    
-    // Apply saved theme
-    if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-        themeToggle.textContent = '🌙 Dark';
-    } else {
-        themeToggle.textContent = '☀️ Light';
+
+    if (!themeToggle) {
+        return;
     }
-    
-    // Toggle theme when button is clicked
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('light-theme');
-        
-        if (body.classList.contains('light-theme')) {
-            themeToggle.textContent = '🌙 Dark';
-            localStorage.setItem('theme', 'light');
-        } else {
-            themeToggle.textContent = '☀️ Light';
-            localStorage.setItem('theme', 'dark');
+
+    const storageKey = 'theme';
+
+    const getStoredTheme = () => {
+        try {
+            return localStorage.getItem(storageKey);
+        } catch {
+            return null;
         }
+    };
+
+    const setStoredTheme = (theme) => {
+        try {
+            localStorage.setItem(storageKey, theme);
+        } catch {
+            // localStorage can be unavailable in restricted browser contexts.
+        }
+    };
+
+    const applyTheme = (theme) => {
+        const isLight = theme === 'light';
+        document.body.classList.toggle('light-theme', isLight);
+        themeToggle.textContent = isLight ? 'Dark mode' : 'Light mode';
+        themeToggle.setAttribute('aria-pressed', String(isLight));
+    };
+
+    applyTheme(getStoredTheme() || 'dark');
+
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(nextTheme);
+        setStoredTheme(nextTheme);
     });
 });
-

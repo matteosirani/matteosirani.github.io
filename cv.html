@@ -4,70 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Curriculum Vitae - Matteo Sirani">
+    <meta name="theme-color" content="#111111">
     <title>CV - Matteo Sirani</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav>
         <div class="nav-container">
-            <h1 class="logo">
-                <img src="images/bgse-logo.png" alt="BGSE" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+            <a class="site-title" href="index.html" aria-label="Matteo Sirani home">
+                <img src="images/bgse-logo.png" alt="Bonn Graduate School of Economics" class="logo-mark">
                 Matteo Sirani
-            </h1>
+            </a>
             <div class="nav-right">
-                <ul class="nav-links">
+                <ul class="nav-links" aria-label="Main navigation">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="cv.html" class="active">CV</a></li>
+                    <li><a href="cv.html" class="active" aria-current="page">CV</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-toggle">☀️ Light</button>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Light mode</button>
             </div>
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section>
             <div class="container">
-                <h3>Curriculum Vitae</h3>
+                <h1 class="page-title">Curriculum Vitae</h1>
 
-                <h4 class="subsection-heading" style="margin-top: 2.5rem; margin-bottom: 1rem; color: #d0d0d0; font-size: 1.2rem;">Education</h4>
-                
-                <div class="publication-item">
-                    <h4>PhD with integrated M.Sc. in Economic Research</h4>
-                    <p class="venue"><a href="https://www.econ.uni-bonn.de/bgse/en" target="_blank" style="color: #5dade2;">Bonn Graduate School of Economics</a>, 2024 - Present</p>
-                </div>
+                <h2 class="subsection-heading">Education</h2>
 
-                <div class="publication-item">
-                    <h4>MPhil in Economics, Distinction (Top 30%)</h4>
-                    <p class="venue"><a href="https://www.economics.ox.ac.uk/" target="_blank" style="color: #5dade2;">University of Oxford</a>, 2021 - 2023</p>
-                </div>
+                <article class="publication-item">
+                    <h3>PhD with integrated M.Sc. in Economic Research</h3>
+                    <p class="venue"><a href="https://www.econ.uni-bonn.de/bgse/en" target="_blank" rel="noopener noreferrer">Bonn Graduate School of Economics</a>, 2024 - Present</p>
+                </article>
 
-                <div class="publication-item">
-                    <h4>BSc in Economics and Finance, 110 cum laude (Top 5%)</h4>
-                    <p class="venue"><a href="https://www.unibocconi.it/en" target="_blank" style="color: #5dade2;">Università Commerciale Luigi Bocconi</a>, 2018 - 2021</p>
-                </div>
+                <article class="publication-item">
+                    <h3>MPhil in Economics, Distinction (Top 30%)</h3>
+                    <p class="venue"><a href="https://www.economics.ox.ac.uk/" target="_blank" rel="noopener noreferrer">University of Oxford</a>, 2021 - 2023</p>
+                </article>
 
-                <h4 class="subsection-heading" style="margin-top: 2rem; margin-bottom: 1rem; color: #d0d0d0; font-size: 1.2rem;">Current Positions</h4>
-                
-                <div class="publication-item">
+                <article class="publication-item">
+                    <h3>BSc in Economics and Finance, 110 cum laude (Top 5%)</h3>
+                    <p class="venue"><a href="https://www.unibocconi.it/en" target="_blank" rel="noopener noreferrer">Universit&agrave; Commerciale Luigi Bocconi</a>, 2018 - 2021</p>
+                </article>
+
+                <h2 class="subsection-heading">Current Positions</h2>
+
+                <article class="publication-item">
                     <p><strong>Research Assistant</strong> - University of Bonn (Prof. Keith Kuester)</p>
                     <p><strong>Academic Consultant</strong> - European Central Bank, DG-MP / Monetary Policy Strategy</p>
-                </div>
+                </article>
 
-                <h4 class="subsection-heading" style="margin-top: 2rem; margin-bottom: 1rem; color: #d0d0d0; font-size: 1.2rem;">Awards</h4>
-                
-                <div class="publication-item">
+                <h2 class="subsection-heading">Awards</h2>
+
+                <article class="publication-item">
                     <p>PhD Scholarship, Bonn Graduate School of Economics (2024 - Present)</p>
                     <p>Rector's Prize, Lincoln College, University of Oxford (2023)</p>
-                    <p>Dean's Award, Università Commerciale Luigi Bocconi (2019)</p>
-                </div>
+                    <p>Dean's Award, Universit&agrave; Commerciale Luigi Bocconi (2019)</p>
+                </article>
 
-                <p style="margin: 3rem 0; text-align: center;">
-                    <a href="files/CV.pdf" style="background-color: #5dade2; color: #0f0f0f; padding: 0.8rem 1.5rem; 
-                    border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600;">
-                        View Complete CV
-                    </a>
+                <p class="cta-row">
+                    <a href="files/CV.pdf" class="button-link">View Complete CV (PDF)</a>
                 </p>
             </div>
         </section>
@@ -78,39 +76,6 @@
             <p>&copy; 2026 Matteo Sirani. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script>
-        // Theme Toggle Functionality - Inline for reliability
-        (function() {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            
-            // Check for saved theme preference or default to dark
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            
-            // Apply saved theme
-            if (savedTheme === 'light') {
-                body.classList.add('light-theme');
-                if (themeToggle) themeToggle.textContent = '🌙 Dark';
-            } else {
-                if (themeToggle) themeToggle.textContent = '☀️ Light';
-            }
-            
-            // Toggle theme when button is clicked
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    body.classList.toggle('light-theme');
-                    
-                    if (body.classList.contains('light-theme')) {
-                        themeToggle.textContent = '🌙 Dark';
-                        localStorage.setItem('theme', 'light');
-                    } else {
-                        themeToggle.textContent = '☀️ Light';
-                        localStorage.setItem('theme', 'dark');
-                    }
-                });
-            }
-        })();
-    </script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>
